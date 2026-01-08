@@ -1,0 +1,12 @@
+inputs:
+  - type: logfile
+    enabled: true
+    streams:
+      - paths:
+          - /home/azureuser/atomic-agent-azure-elastic-observability/agent/agent.log
+        parsers:
+          - ndjson:
+              overwrite_keys: true
+        data_stream:
+          namespace: "default"
+        pipeline: "atomic-agent-pipeline"

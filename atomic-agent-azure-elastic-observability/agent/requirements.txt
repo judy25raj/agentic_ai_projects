@@ -1,0 +1,5 @@
+elastic-apm
+elasticsearch
+python-dotenv
+requests
+PyYAML

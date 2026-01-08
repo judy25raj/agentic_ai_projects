@@ -1,0 +1,20 @@
+agent_id: "agent-01"
+log_file: "agent.log"
+interval_seconds: 2
+
+actions:
+  - fetch_data
+  - process_order
+  - run_batch
+  - send_notification
+
+success_rate: 0.8
+min_latency_ms: 100
+max_latency_ms: 800
+
+elastic:
+  cloud_id: "<YOUR_ELASTIC_CLOUD_ID>"
+  api_key: "<YOUR_API_KEY>"
+  logs_index: "atomic-agent-logs"
+  embeddings_index: "atomic-agent-embeddings"   # if you’re using embeddings
+

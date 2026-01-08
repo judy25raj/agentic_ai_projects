@@ -1,0 +1,25 @@
+{
+  "description": "Parse Atomic Agent JSON logs and enrich with service metadata",
+  "processors": [
+    {
+      "json": {
+        "field": "message",
+        "target_field": "atomic",
+        "add_to_root": false,
+        "ignore_failure": true
+      }
+    },
+    {
+      "set": {
+        "field": "service.name",
+        "value": "atomic-agent-service"
+      }
+    },
+    {
+      "set": {
+        "field": "env",
+        "value": "dev"
+      }
+    }
+  ]
+}

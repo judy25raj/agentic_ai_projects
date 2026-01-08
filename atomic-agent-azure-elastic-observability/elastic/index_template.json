@@ -1,0 +1,30 @@
+{
+  "index_patterns": ["atomic-agent-*"],
+  "template": {
+    "settings": {
+      "number_of_shards": 1
+    },
+    "mappings": {
+      "properties": {
+        "atomic": {
+          "properties": {
+            "timestamp": { "type": "date" },
+            "agent_id":   { "type": "keyword" },
+            "action":     { "type": "keyword" },
+            "status":     { "type": "keyword" },
+            "message":    { "type": "text" },
+            "latency_ms": { "type": "integer" }
+          }
+        },
+        "log_vector": {
+          "type": "dense_vector",
+          "dims": 1536,
+          "index": true,
+          "similarity": "cosine"
+        }
+      }
+    }
+  },
+  "priority": 500,
+  "data_stream": { }
+}
