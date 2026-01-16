@@ -90,6 +90,16 @@ This project goes beyond basic logging by demonstrating:
 - **Dashboards:** Kibana Observability & Infrastructure
 
 ---
+## 🔐 Environment Configuration
+
+This project uses environment variables for secure configuration and follows production security best practices.
+
+- A local `.env` file is used to store sensitive values (Elastic Cloud URL, API keys, agent identifiers)
+- The `.env` file is **not committed** to version control
+- A `.env.example` file documents the required variables and safe defaults
+
+To run the agent locally, create a `.env` file based on `.env.example` and populate it with your own credentials.
+
 
 ## 📁 Repository Structure
 
